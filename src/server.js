@@ -20,8 +20,17 @@ const onRequest = (req, res) => {
     case '/bird.mp4':
       mediaHandler.getBird(req, res);
       break;
-    default:
+    case '/client':
+      htmlHandler.getIndex(req, res, '1');
+      break;
+    case '/client2':
       htmlHandler.getIndex(req, res, '2');
+      break;
+    case '/client3':
+      htmlHandler.getIndex(req, res, '3');
+      break;
+    default:
+      htmlHandler.getIndex(req, res, '1');
       break;
   }
 };
